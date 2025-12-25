@@ -1,0 +1,238 @@
+/* ================= THEME VARIABLES ================= */
+:root {
+  --bg: linear-gradient(135deg, #020617, #0f172a);
+  --card: rgba(255, 255, 255, 0.08);
+  --text: #e5e7eb;
+  --subtext: #cbd5f5;
+  --primary: #38bdf8;
+  --glow: rgba(56, 189, 248, 0.25);
+}
+
+.light {
+  --bg: linear-gradient(135deg, #e2e8f0, #f8fafc);
+  --card: #ffffff;
+  --text: #020617;
+  --subtext: #334155;
+  --glow: rgba(59, 130, 246, 0.15);
+}
+
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  color: var(--text);
+  position: relative;
+  overflow-x: hidden;
+  transition: background 0.6s ease, color 0.3s ease;
+}
+
+/* Animated Gradient */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating Glow */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--glow), transparent 70%);
+  z-index: -1;
+  animation: floatGlow 10s ease-in-out infinite;
+}
+
+body::before {
+  top: -150px;
+  left: -150px;
+}
+
+body::after {
+  bottom: -150px;
+  right: -150px;
+  animation-delay: 5s;
+}
+
+@keyframes floatGlow {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(40px, 30px);
+  }
+}
+
+/* ================= LAYOUT ================= */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.section {
+  margin-top: 80px;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: var(--primary);
+}
+
+/* ================= HERO ================= */
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 17px;
+  color: var(--subtext);
+  max-width: 800px;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background: var(--primary);
+  color: #020617;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 25px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* GitHub Button */
+.btn.github {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn.github:hover {
+  background: var(--primary);
+  color: #020617;
+}
+
+/* Profile Links */
+.links {
+  margin-bottom: 20px;
+}
+
+.links a {
+  margin-right: 15px;
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ================= TOGGLE ================= */
+.toggle {
+  float: right;
+  cursor: pointer;
+  background: var(--card);
+  padding: 8px 12px;
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+}
+
+/* ================= SKILLS ================= */
+.skills-list {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+}
+
+.skill-row {
+  margin-bottom: 18px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--subtext);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skill-row strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* .skill-row:hover {
+  transform: translateX(8px);
+  color: var(--text);
+} */
+
+/* ================= PROJECTS ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: var(--card);
+  padding: 22px;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Project buttons */
+.project-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .skill-row {
+    font-size: 16px;
+  }
+
+  .project-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+/* ================= ACCESSIBILITY ================= */
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+  body::before,
+  body::after {
+    animation: none;
+  }
+}
