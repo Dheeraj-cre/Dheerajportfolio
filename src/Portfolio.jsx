@@ -38,8 +38,8 @@ export default function Portfolio() {
     {
       title: "Everyday Chef – Recipe Finder App",
       description: "A React-based recipe finder application that allows users to search recipes using ingredients or dish names. Integrated with external recipe APIs and designed with a clean, responsive UI.",
-      demo: "#",
-      github: "#"
+      demo: "https://recipefinderapp-mu.vercel.app/",
+      github: "https://github.com/Dheeraj-cre/recipe-finder-react"
     },
     {
       title: "CRUD Student Management App",
@@ -56,8 +56,8 @@ export default function Portfolio() {
     {
       title: "Clinic Website CMS",
       description: "A complete MERN-based Content Management System for clinics that allows admins to manage doctors, services, appointments, gallery, and patient inquiries through a secure dashboard.",
-      demo: "#",
-      github: "#"
+      demo: "https://clinic-website-cms.vercel.app/",
+      github: "https://github.com/Dheeraj-cre/clinic-website-cms"
     },
     {
       title: "Data Upload & Visualization Dashboard",
@@ -74,8 +74,8 @@ export default function Portfolio() {
     {
       title: "MERN Authentication App",
       description: "A secure MERN stack authentication system featuring JWT-based login, email OTP verification, and password reset functionality with encrypted credentials.",
-      demo: "#",
-      github: "#"
+      demo: "https://mern-authentication-app-nine.vercel.app/login",
+      github: "https://github.com/Dheeraj-cre/mern-authentication-app"
     },
     {
       title: "Food Delivery Website",
