@@ -20,7 +20,7 @@ export default function Portfolio() {
   };
 
   const skills = [
-    { category: "Frontend", items: "HTML5, CSS3, JavaScript (ES6+), React.js, Tailwind CSS" },
+    { category: "Frontend", items: "HTML5, CSS3, JavaScript (ES6+), React.js, Next.js,Tailwind CSS" },
     { category: "Backend", items: "Node.js, Express.js, RESTful APIs" },
     { category: "Database", items: "MySQL, MongoDB" },
     { category: "Tools & Platforms", items: "Git, GitHub, Postman, VS Code" },
