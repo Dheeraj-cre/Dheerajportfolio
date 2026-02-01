@@ -19,6 +19,7 @@ export default function Portfolio() {
     localStorage.setItem("portfolio-theme", newTheme);
   };
 
+  // Skills
   const skills = [
     { category: "Frontend", items: "HTML5, CSS3, JavaScript (ES6+), React.js, Next.js,Tailwind CSS" },
     { category: "Backend", items: "Node.js, Express.js, RESTful APIs" },
