@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 import profileImg from "./assets/profile.jpg";
 
-
 // Import components
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -73,32 +72,37 @@ export default function Portfolio() {
   };
 
   const skills = [
-  { 
-    category: "Frontend", 
-    items: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "Next.js", "Tailwind CSS"]
-  },
-  { 
-    category: "Backend", 
-    items: ["Node.js", "Express.js", "RESTful APIs"]
-  },
-  { 
-    category: "Database", 
-    items: ["MySQL", "MongoDB"]
-  },
-  { 
-    category: "Tools & Platforms", 
-    items: ["Git", "GitHub", "Postman", "VS Code"]
-  },
-  { 
-    category: "Others", 
-    items: ["UI/UX Principles", "Python", "Deployment (Netlify / Render)"]
-  },
-  { 
-    category: "Soft Skills", 
-    items: ["Problem Solving", "Teamwork", "Communication"]
-  }
-];
-
+    { 
+      category: "Frontend", 
+      items: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "Next.js", "Tailwind CSS"],
+      icon: "🎨"
+    },
+    { 
+      category: "Backend", 
+      items: ["Node.js", "Express.js", "RESTful APIs"],
+      icon: "⚙️"
+    },
+    { 
+      category: "Database", 
+      items: ["MySQL", "MongoDB"],
+      icon: "💾"
+    },
+    { 
+      category: "Tools & Platforms", 
+      items: ["Git", "GitHub", "Postman", "VS Code"],
+      icon: "🛠️"
+    },
+    { 
+      category: "Others", 
+      items: ["UI/UX Principles", "Python", "Deployment (Netlify / Render)"],
+      icon: "🚀"
+    },
+    { 
+      category: "Soft Skills", 
+      items: ["Problem Solving", "Teamwork", "Communication"],
+      icon: "💡"
+    }
+  ];
 
   const projects = [
     {
@@ -167,34 +171,29 @@ export default function Portfolio() {
   ];
 
   const experience = [
-  {
-    role: "Frontend Developer Intern",
-    company: "V.EDU Pvt. Ltd.",
-    period: "Feb 2025 - Jul 2025",
-    description:
-      "Worked on building and optimizing responsive web interfaces using React.js, HTML, CSS, and JavaScript, focusing on performance and usability.",
-    achievements: [
-      "Developed 20+ reusable and responsive UI components",
-      "Improved website performance and load time by ~15%",
-      "Fixed UI/UX issues to enhance user experience across devices",
-      "Collaborated with designers and backend developers in an agile environment"
-    ]
-  },
-  {
-    role: "Frontend / Full Stack Web Developer",
-    company: "Freelance / Personal Projects",
-    period: "2023 - Present",
-    description:
-      "Designed and developed multiple real-world web applications using modern frontend and full-stack technologies.",
-    achievements: [
-      "Built and deployed 8+ real-world projects using React.js and MERN stack",
-      "Implemented REST APIs, authentication, and dashboard features",
-      "Focused on clean code, responsiveness, and modern UI practices",
-      "Deployed applications on Netlify, Vercel, and Render"
-    ]
-  }
-];
-
+    {
+      role: "Frontend Developer Intern",
+      company: "Tech Solutions",
+      period: "Jan 2024 - Present",
+      description: "Building responsive web applications using React.js and modern JavaScript frameworks.",
+      achievements: [
+        "Developed 5+ production-ready components",
+        "Improved page load time by 40%",
+        "Collaborated with cross-functional teams"
+      ]
+    },
+    {
+      role: "Freelance Web Developer",
+      company: "Self-Employed",
+      period: "2023 - Present",
+      description: "Creating custom websites and web applications for clients across various industries.",
+      achievements: [
+        "Delivered 10+ successful projects",
+        "Maintained 100% client satisfaction",
+        "Specialized in React and responsive design"
+      ]
+    }
+  ];
 
   const navItems = [
     { id: "home", label: "Home" },
