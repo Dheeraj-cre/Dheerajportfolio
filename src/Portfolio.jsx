@@ -55,6 +55,7 @@ export default function Portfolio() {
     localStorage.setItem("portfolio-theme", newTheme);
   };
 
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -71,6 +72,9 @@ export default function Portfolio() {
       });
     }
   };
+
+
+  // Skills
 
   const skills = [
   { 
