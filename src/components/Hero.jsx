@@ -30,7 +30,7 @@ export default function Hero({ profileImg }) {
             </p>
 
             <div className="hero-cta">
-              <a href="/Dheeraj_Resume.pdf" className="btn btn-primary" download>
+              <a href="/Dheeraj_ Resume_MERN.pdf" className="btn btn-primary" download>
                 <span>Download Resume</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M8 12L3 7L4.4 5.6L7 8.2V0H9V8.2L11.6 5.6L13 7L8 12Z" fill="currentColor"/>
