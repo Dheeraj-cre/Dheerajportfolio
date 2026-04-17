@@ -105,6 +105,48 @@ export default function Portfolio() {
 
 
   const projects = [
+     {
+    title: "Car Rental Platform (Full Stack)",
+    description:
+      "Developed a full-stack car rental application with secure authentication and a dynamic booking system. Built REST APIs for managing vehicles, users, and reservations, ensuring real-time booking updates and smooth user experience.",
+    demo: "https://car-rental-nine-ochre.vercel.app/",
+    github: "https://github.com/Dheeraj-cre/car_rental_website",
+    tags: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+    highlights: [
+      "Implemented user authentication & booking system",
+      "Designed scalable backend APIs",
+      "Responsive UI for mobile & desktop",
+      "Structured MongoDB schemas for performance"
+    ]
+  },
+  {
+    title: "College Website (Responsive UI)",
+    description:
+      "Built a fully responsive multi-page college website using React.js with modern UI/UX principles. Optimized performance using lazy loading and reusable components.",
+    demo: "https://college-website-nine-eta.vercel.app/",
+    github: "https://github.com/Dheeraj-cre/College-Website",
+    tags: ["React", "Tailwind", "UI/UX"],
+    highlights: [
+      "10+ reusable components (Navbar, Hero, Events, etc.)",
+      "40% performance improvement",
+      "Mobile-first responsive design",
+      "Future-ready for backend integration"
+    ]
+  },
+  {
+    title: "Digital Marketing Website",
+    description:
+      "Designed and developed a modern multi-page digital marketing website with clean UI/UX and smooth animations to improve user engagement.",
+    demo: "https://digital-marketing-website-one-wheat.vercel.app/",
+    github: "https://github.com/Dheeraj-cre/Digital-Marketing-Website",
+    tags: ["React", "Tailwind", "Animations"],
+    highlights: [
+      "6+ structured sections (Hero, Services, Portfolio)",
+      "Smooth transitions and animations",
+      "Optimized performance with lazy loading",
+      "Reusable component architecture"
+    ]
+  },
     {
       title: "Movie Search App",
       description: "A responsive React.js application that fetches real-time movie data using APIs. Includes search functionality, ratings, and modern UI.",
@@ -147,13 +189,13 @@ export default function Portfolio() {
       github: "https://github.com/Dheeraj-cre/data-upload-visualization-demo",
       tags: ["React", "Charts", "Data Viz"]
     },
-    {
-      title: "Car Rental Website",
-      description: "React-based car rental platform with search, filters, and booking functionality.",
-      demo: "https://car-rentweb.netlify.app",
-      github: "https://github.com/Dheeraj-cre/car_rental_website",
-      tags: ["React", "UI/UX", "Booking"]
-    },
+    // {
+    //   title: "Car Rental Website",
+    //   description: "React-based car rental platform with search, filters, and booking functionality.",
+    //   demo: "https://car-rentweb.netlify.app",
+    //   github: "https://github.com/Dheeraj-cre/car_rental_website",
+    //   tags: ["React", "UI/UX", "Booking"]
+    // },
     {
       title: "MERN Authentication App",
       description: "A secure MERN stack authentication system featuring JWT-based login, email OTP verification, and password reset functionality with encrypted credentials.",

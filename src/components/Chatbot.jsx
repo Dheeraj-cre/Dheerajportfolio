@@ -44,42 +44,29 @@ export default function Chatbot() {
     setInput("");
     setIsLoading(true);
 
-try {
-  const { data } = await axios.post(
-    "https://ai-chatbot-9do7.onrender.com/chat",
-    { message: trimmed }
-  );
+    try {
+      const { data } = await axios.post("https://ai-chatbot-1lvp.onrender.com/chat", {
+        message: trimmed,
+      });
 
-  const botMsg = {
-    id: Date.now() + 1,
-    role: "bot",
-    text:
-      data?.reply ||
-      "⏳ Server is waking up... please try again in a moment",
-    timestamp: new Date(),
-  };
-
-  setMessages((prev) => [...prev, botMsg]);
-
-} catch (error) {
-  console.log(error);
-
-  let errorMessage = "⚠️ Server busy. Try again.";
-
-  if (error.response?.status === 503) {
-    errorMessage = "⏳ AI is busy right now. Please retry.";
-  }
-
-  setMessages((prev) => [
-    ...prev,
-    {
-      id: Date.now() + 1,
-      role: "bot",
-      text: errorMessage,
-      timestamp: new Date(),
-    },
-  ]);
-} finally {
+const botMsg = {
+  id: Date.now() + 1,
+  role: "bot",
+  text: data.reply || "⚠️ No response from server",
+  timestamp: new Date(),
+};
+      setMessages((prev) => [...prev, botMsg]);
+    } catch {
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: Date.now() + 1,
+          role: "bot",
+          text: "Oops! Something went wrong. Please try again.",
+          timestamp: new Date(),
+        },
+      ]);
+    } finally {
       setIsLoading(false);
     }
   };
